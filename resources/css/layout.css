@@ -1,0 +1,99 @@
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0px;
+    
+    
+}
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0px;
+}
+
+/* =========================
+   GLOBAL PAGE WRAPPER
+========================= */
+
+body {
+    margin: 0;
+    padding-top: 90px; /* space for fixed navbar */
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow-x: hidden;
+
+    font-family: 'Inter', sans-serif;
+    background-color: #f5f7fb;
+    color: #1f2937;
+
+    background-image:
+        radial-gradient(circle at 20% 20%, rgba(129, 224, 118, 0.05), transparent 40%),
+        radial-gradient(circle at 80% 80%, rgba(135, 211, 209, 0.04), transparent 40%),
+        linear-gradient(rgba(185, 170, 170, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(231, 219, 219, 0.04) 1px, transparent 1px);
+
+    background-size: 50px 50px;
+    background-attachment: fixed;
+}
+
+/* =========================
+   MAIN STRUCTURE
+========================= */
+
+main {
+    flex: 1;
+    width: 100%;
+    display: block;
+}
+
+.page-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* =========================
+   NAV / FOOTER STRUCTURE
+========================= */
+
+nav {
+    position: relative;
+    z-index: 1000;
+}
+
+footer {
+    flex-shrink: 0;
+    width: 100%;
+  
+    
+}
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+#mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100%;
+    width: 280px;
+    z-index: 2100;
+    transition: right 0.3s ease;
+}
+
+#mobile-menu.show {
+    right: 0;
+}
+
+#mobile-overlay {
+    z-index: 2000;
+}
+
+.nav-card {
+    z-index: 1100;
+}

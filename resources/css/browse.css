@@ -1,0 +1,288 @@
+/* =========================
+   SAAS PRODUCT PAGE
+========================= */
+
+.saas-products-page {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+    font-family: system-ui, sans-serif;
+}
+
+/* Header */
+.saas-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.saas-header h1 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.saas-header p {
+    color: #6b7280;
+}
+
+/* Toolbar */
+.saas-toolbar {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.saas-toolbar input,
+.saas-toolbar select {
+    padding: 10px 14px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    outline: none;
+    background: #fff;
+    transition: 0.3s;
+}
+
+.saas-toolbar input:focus,
+.saas-toolbar select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59,130,246,0.2);
+}
+
+/* Grid */
+.saas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 900px) {
+    .saas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .saas-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Card */
+.saas-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.saas-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+/* Image */
+.saas-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.saas-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.saas-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Body */
+.saas-body {
+    padding: 15px;
+}
+
+.saas-body h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+/* Description */
+.saas-desc {
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 10px;
+}
+
+/* Meta */
+.saas-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.price {
+    font-weight: 700;
+    color: #16a34a;
+}
+
+.stock {
+    color: #6b7280;
+}
+
+/* Buttons */
+.saas-btn-primary {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(90deg,#3b82f6,#06b6d4);
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.saas-btn-primary:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.saas-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.saas-btn-secondary {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.saas-heart {
+    width: 42px;
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Empty */
+.saas-empty {
+    text-align: center;
+    padding: 50px;
+    color: #6b7280;
+}
+
+body {
+    background: linear-gradient(-45deg, #0f172a, #1e293b, #0b1220, #111827);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #fff;
+}
+.saas-card {
+    border-radius: 18px;
+    overflow: hidden;
+    transition: 0.4s;
+    position: relative;
+}
+
+.saas-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+}
+
+.saas-badges {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    gap: 6px;
+    z-index: 2;
+}
+
+.badge {
+    font-size: 11px;
+    padding: 5px 8px;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.badge.new {
+    background: #22c55e;
+}
+
+.badge.hot {
+    background: #ef4444;
+}
+
+.badge.sale {
+    background: #f59e0b;
+}
+.skeleton {
+    position: relative;
+    overflow: hidden;
+    background: rgba(255,255,255,0.1);
+}
+
+.skeleton::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150px;
+    height: 100%;
+    width: 150px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.2),
+        transparent
+    );
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% { left: -150px; }
+    100% { left: 100%; }
+}
+.saas-image img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.saas-card:hover img {
+    transform: scale(1.08);
+}
+.price {
+    color: #34d399;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.stock {
+    color: #94a3b8;
+}

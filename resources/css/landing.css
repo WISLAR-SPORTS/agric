@@ -1,0 +1,187 @@
+/* =========================
+   GLOBAL SECTION SPACING
+========================= */
+/*
+section {
+    padding: 20px 0;
+}*/
+.features h2{
+    font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 60px 0;
+    }
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero-section {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    z-index: 1;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.hero-section p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn-success {
+    background-color: #198754;
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: #146c43;
+}
+
+/* =========================
+   STATS SECTION
+========================= */
+
+.stats-title {
+    font-weight: 800;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+   
+    margin-top:0;
+}
+
+.stats .card {
+    min-height: 180px;
+    padding: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 16px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.9),
+        rgba(245,247,250,0.7)
+    );
+
+    backdrop-filter: blur(8px);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+
+    transition: all 0.3s ease;
+}
+
+.stats .card:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.stats .card h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.stats .card p {
+    font-size: 0.9rem;
+    color: rgba(0,0,0,0.6);
+}
+
+/* =========================
+   FEATURES SECTION
+========================= */
+
+.features {
+    color: blue;
+    margin-top: 0;
+}
+
+.features h2 {
+    font-weight: 700;
+}
+
+.feature-card {
+    position: relative;
+    background-size: 140px;
+    background-repeat: no-repeat;
+    background-position: 110% -10%;
+    background-color: #ffffff;
+    overflow: hidden;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.feature-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: green;
+}
+
+.feature-description {
+    font-size: 0.95rem;
+    color: black;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   FAQ SECTION
+========================= */
+
+.faq h2 {
+    font-weight: 700;
+}
+
+.accordion-button {
+    font-weight: 500;
+}
+
+.accordion-item {
+    border-radius: 12px !important;
+    overflow: hidden;
+}
+
+/* =========================
+   DASHBOARD CARD
+========================= */
+
+.hero-section .card {
+    border-radius: 20px;
+}
+
+.hero-section .progress-bar {
+    background-color: #198754;
+}

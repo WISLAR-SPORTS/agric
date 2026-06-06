@@ -1,0 +1,39 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+
+return new class extends Migration
+{
+    public function up(): void
+    {
+        Schema::table('orders', function (Blueprint $table) {
+           
+           
+          
+           
+            
+        });
+    }
+
+    public function down(): void
+    {
+        Schema::table('orders', function (Blueprint $table) {
+            $table->dropColumn([
+                'order_number',
+                'customer_name',
+                'customer_email',
+                'customer_phone',
+                'delivery_address',
+                'district',
+                'total_amount',
+                'payment_method',
+                'status',
+                'notes',
+                'order_date',
+            ]);
+        });
+    }
+};
