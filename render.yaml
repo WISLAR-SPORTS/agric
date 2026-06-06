@@ -1,7 +1,8 @@
+runtime: php
+
 services:
   - type: web
     name: agric
-    runtime: php
     plan: free
     env: php
 
