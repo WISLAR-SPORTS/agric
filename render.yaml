@@ -3,6 +3,7 @@ services:
     name: agric
     runtime: php
     plan: free
+    env: php
 
     buildCommand: |
       composer install --no-dev --optimize-autoloader
